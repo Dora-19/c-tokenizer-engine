@@ -6,11 +6,10 @@
 #include <string.h>
 #include <ctype.h>
 
-#define MAX_VOCAB   250   // base chars + learned merge tokens
-#define MAX_MERGES   40   // merge rules we can store
+#define MAX_VOCAB   300   // base chars + learned merge tokens
+#define MAX_MERGES   60   // merge rules we can store (must be >= NUM_MERGES in bpe.c)
 #define MAX_SEG     250   // max segments when encoding (input up to 200 chars)
 #define MAX_SUB_LEN  30   // max chars in one subword token
-#define NUM_MERGES   30   // how many merges to learn during training
 
 // One BPE merge rule: left + right -> merged
 typedef struct {

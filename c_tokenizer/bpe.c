@@ -1,22 +1,66 @@
 // bpe.c
 #include "bpe.h"
 
-#define MAX_WORDS    150
-#define MAX_WORD_SEG  20   // max chars per word (longest word in corpus = "tokenizer" = 9)
-#define MAX_PAIRS    600
+#define MAX_WORDS    400
+#define MAX_WORD_SEG  20
+#define MAX_PAIRS   1500
+#define NUM_MERGES    50
 
 // Training corpus — repeated words drive interesting merges
 static const char *corpus[] = {
+    // ordering and commerce
     "order 5 laptops for the office",
     "order 10 monitors for the team",
     "buy 5 keyboards and monitors",
     "cancel the order for laptops",
-    "the model processes tokens",
-    "the tokenizer splits text into tokens",
     "buy the laptop for the office",
     "cancel the purchase",
     "the price is 500 dollars",
     "order the item online for 1200",
+    "order 20 tablets for the school",
+    "buy the printer for the office",
+    "cancel the monitor order today",
+    "the shipping price is very high",
+    "order the keyboard and the mouse",
+    "buy 3 laptops and 5 monitors",
+    "the total price is 3500 dollars",
+    "cancel the purchase and get a refund",
+    "order the items for fast delivery",
+    "the delivery time is 5 days",
+    "buy the cheapest laptop online",
+    "the order was cancelled by the user",
+    // tokenization and language models
+    "the model learns from tokens",
+    "tokens are the units of language",
+    "the tokenizer processes every word",
+    "language models process text tokens",
+    "the model splits the input into tokens",
+    "learning the patterns in text data",
+    "the training data contains many tokens",
+    "tokens can be words or subwords",
+    "the model processes the input text",
+    "language processing requires many tokens",
+    "the tokenizer learns from the training data",
+    "subword tokens are better than word tokens",
+    "the model learns patterns from the data",
+    "processing text is the first step",
+    "the language model generates tokens",
+    "tokens are mapped to integer ids",
+    "the encoder splits text into subword tokens",
+    "learning subwords helps the model generalize",
+    "the model reads tokens not words",
+    "tokenization is the first step in processing",
+    // general computing
+    "the computer processes the data very fast",
+    "processing text requires splitting into tokens",
+    "the system learns patterns from data",
+    "data processing is fast and efficient",
+    "the algorithm finds the best patterns in data",
+    "the program reads the input and processes it",
+    "splitting the input is the first step",
+    "the output is a list of tokens",
+    "the system splits text into smaller parts",
+    "learning from data is how models improve",
     NULL
 };
 
