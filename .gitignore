@@ -5,6 +5,7 @@
 *.dSYM/
 build/
 DerivedData/
+ctok
 
 # Xcode
 *.xcodeproj/
